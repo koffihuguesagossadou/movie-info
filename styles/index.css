@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --font: 'DM Sans', sans-serif;
+    --primary-color: #0B6170;
+    --secondary-color: #D4F2F4;
+    --third-color: #74E7DA;
+    --white-color: #a0a0a0;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: var(--font);
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(var(--secondary-color) 50%, var(--third-color) 50%)
+}
+
+.container{
+    width: 90vh;
+    background-color: var(--primary-color);
+    min-width: 37.5rem;
+    font-size: 16px;
+    padding: 3em 1.8em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+}
+
+.search-container{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2em;
+}
+
+.search-container input, .search-container button{
+    font-size: 1em;
+    outline: none;
+    border-radius: 0.3em;
+}
+
+.search-container input{
+    padding: 0.7rem;
+    background-color: transparent;
+    border: 1.3px solid var(--white-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.search-container input:focus{
+    border-color: var(--third-color);
+}
+
+.search-container button{
+    cursor: pointer;
+    border:none;
+    background-color: var(--third-color);
+}
+
+.m-infos{
+    display: grid;
+    padding-top: 2em;
+    grid-template-columns: 2fr 2fr;
+    gap: 0.3em;
+}
+
+.m-infos *{
+    color: var(--secondary-color);
+}
+
+.m-infos div{
+    flex-basis: 50%;
+}
+
+
+.m-img img{
+    width: 200px;
+    height: auto;
+}
+
+.m-meta-infos div{
+    margin-bottom: 1.5em;
+}
+
+
+.m-title h3{
+    color: #FDB10B;
+}
+
+.m-plot{
+    padding-top: 1em;
+}
+
+.m-plot *{
+    color: var(--secondary-color)
+}
+
+.enter-movie-name-msg, .not-found{
+    color: red;
+    font-size: 18px;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 768px){
+   
+    .container{
+        font-size: 14px;
+        min-width: 10em;
+    }
+
+    .search-container{
+        grid-template-rows: 0.5fr 0.2fr;
+    }
+
+    .m-img img{
+        width: auto;
+        max-height: 10rem;
+    }
+
+    .m-infos{
+        padding: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+    .enter-movie-name-msg, .not-found{
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
